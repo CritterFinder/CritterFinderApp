@@ -1,0 +1,63 @@
+header {
+  background-image: url(../assets/hero.jpg);
+  height: 80vh; 
+  background-attachment: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  position: relative; 
+}
+
+.acnhLogo {
+  position: absolute; 
+  top: 30%;
+  margin-left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  @include headerFont (3rem, $brown, 700);
+  position: absolute; 
+  bottom: 10%;   
+  margin-left: 50%; 
+  margin-right: -50%; 
+  transform: translate(-50%, -50%);
+  background-color: $headingsColour; 
+  padding: 1.5rem;  
+  border-radius: 1rem;
+  text-transform: uppercase; 
+}
+
+// welcome section
+
+.wrapper { 
+  width: 90%; 
+  margin: 0 auto; 
+  padding-bottom: 5rem; 
+}
+
+.welcomeBox {
+  background-color: $brown; 
+  width: 80%; 
+  padding: 3rem; 
+  border-radius: 1rem; 
+  margin: 0 auto; 
+}
+
+h2 { 
+  @include headerFont (2.8rem, $secondary, 700);
+  margin-top: 0; 
+  text-align: center; 
+}
+
+h3 {
+  @include headerFont (2.5rem, $brown, 700);
+  margin: 3rem; 
+  padding: 2rem; 
+  border-radius: 1rem; 
+  text-align: center; 
+}
+
+.start {
+  background-color: $yellow; 
+}

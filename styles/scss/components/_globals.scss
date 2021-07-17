@@ -1,0 +1,14 @@
+// Basic overall styling
+html {
+  font-size: 125%; 
+}
+
+p {
+  @include bodyFont(1rem, $secondary);
+}
+
+// MAIN STYLING
+
+main {
+  background-image: url(../assets/pattern-leaves-white.jpg); 
+}

@@ -1,0 +1,9 @@
+// SCSS StyleSheets
+@import './base/setup';
+@import './utilities/mixins';
+@import './utilities/variables';
+@import "./components/globals";
+@import './components/header';
+@import './components/search';
+@import './components/gallery';
+@import './components/footer';

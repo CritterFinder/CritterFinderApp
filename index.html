@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Zilla+Slab&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="assets/logo-acnh-en.png" alt="Logo for Animal Crossing: New Horizons" class="acnhLogo">
+        <h1>Critter Finder</h1>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <!-- Welcome section -->
+            <section class="welcome">
+                <div class="welcomeBox">
+                    <h2>Welcome!</h2>
+                    <p>There are many critters to find and we know you're excited to discover them all! Let Mr. Nook
+                        help you find them by providing him with some information below.</p>
+                </div>
+            </section>
+            
+            <h3 class="start">Let's get started!</h3>
+            <!-- Search section -->
+            <section class="inputSection">
+                <div class="inputBox">
+                    <form name="inputForm">
+                        <label for="hemisphere">Hemisphere</label>
+                        <select name="hemisphere" id="hemisphere">
+                            <option value="select" selected>Select</option>
+                            <option value="northern">Northern</option>
+                            <option value="southern">Southern</option>
+                        </select>
+                        <br>
+                        <label for="month">Month</label>
+                        <select name="month" id="month">
+                            <!-- months will show here -->
+                        </select>
+                        <br>
+                        <label for="time">Time</label>
+                        <input type="text" name="time" id="time" maxlength="2">
+                        <br>
+                        <button type="reset">CLEAR</button>
+                        <!-- <button type="submit">SUBMIT</button> -->
+                        <button type="submit" value="Submit">SEARCH</button>
+                    </form>
+                </div>
+                <img src="assets/nook.png" class="nookImg" alt=""> 
+            </section>
+            <!-- Gallery section -->
+            <section class="critters">
+                <h3>Bugs | Catchable Now</h3>
+                <ul class="gallery">
+                    <!-- info displays here in an li -->
+                </ul>
+                <img src="assets/Timmy_and_Tommy.png" alt="Picture shows Animal Crossing Character Timmy and Tommy happily standing beside one another and waving" class="timTomImg">
+            </section>
+
+        </div>
+    </main>
+    <!-- Footer section -->
+    <footer>
+        <p>Copyright Juno College 2021</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.critters {
+  margin-top: 5rem; 
+  background-color: $secondary; 
+  border: 8px solid $buttons;
+  border-radius: 1rem; 
+  position: relative;  
+}
+
+.critters ul {
+  list-style: none; 
+  display: grid; 
+  grid-template-columns: repeat(4, auto);
+}
+
+.critters li {
+  margin: 1rem auto; 
+  border: 3px solid $brown; 
+  border-radius: 50%; 
+}
+
+.critters li:hover, 
+.critters li:focus {
+  border-color: $yellow; 
+}
+
+.timTomImg {
+  width: 20%; 
+  position: absolute; 
+  bottom: -2rem; 
+  right: -2rem; 
+}
