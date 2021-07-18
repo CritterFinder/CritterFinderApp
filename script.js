@@ -19,7 +19,7 @@ app.monthObj = {
 }
 
 // store the api
-app.apiUrl = 'http://acnhapi.com/v1a/bugs'
+app.apiUrl = 'https://acnhapi.com/v1a/bugs'
 
 // init method
 app.init = () => {
