@@ -1,4 +1,5 @@
 .modal {
+  font-family: 'Libre Franklin', sans-serif;
   position: fixed;
   left: 0;
   top: 0;
@@ -15,26 +16,37 @@
     width: 500px;
     border-radius: 20px;
   }
+
+  &Img {
+    height: 60px;
+  }
+
+  &Heading {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
   
   &Header {
-    // @include headerFont(1rem, $secondary, 400);
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: $turquoise;
-    padding: 0;
+    padding: 0 30px;
     margin: 0;
     border-radius: 20px 20px 0 0;
 
     &Content {
       display: flex;
       align-items: center;
+      margin: 0;
     }
   }
 
   &Close {
     font-size: 28px;
     font-weight: bold;
+    margin: 0;
 
     &:hover, &:focus {
       cursor: pointer;
@@ -48,16 +60,27 @@
     &Item {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     &Label {
-      background: $taupe;
+      font-weight: bold;
+      background: $brown;
       color: white;
       border-radius: 10px;
       text-align: center;
       width: 100px;
       padding: 10px;
       margin: 20px;
+    }
+
+    &Text {
+      font-weight: bold;
+      text-align: left;
+      padding: 10px;
+      background: white;
+      width: 100%;
+      border-radius: 10px;
     }
   }
 

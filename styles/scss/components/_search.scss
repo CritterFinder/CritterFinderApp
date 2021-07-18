@@ -54,7 +54,7 @@ form {
 .inputBox select:focus,
 .inputBox input:hover,
 .inputBox input:focus {
-  border: 2px solid $buttons,
+  border: 2px solid $buttons;
 }
 
 .inputBox select, 
@@ -83,7 +83,8 @@ button {
 button:hover, 
 button:focus {
   background-color: $headingsBackground;
-  color: $secondary;  
+  color: $secondary;
+  cursor: pointer;
 }
 
 .inputNookImg {

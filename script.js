@@ -127,7 +127,6 @@ app.getCritterInfo = (critterID) => {
         const speed = critter.speed // only available for fishes
         const location = critter.availability.location
         const rarity = critter.availability.rarity
-        // console.log(image, name, price, location, rarity);
         // display: image, name, price, shadow, speed, location, rarity
         app.displayCritterInfo(image, name, price, location, rarity)
       }

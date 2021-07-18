@@ -441,6 +441,7 @@ button:hover,
 button:focus {
   background-color: #6db6a2;
   color: #FAF4DE;
+  cursor: pointer;
 }
 
 .inputNookImg {
@@ -473,6 +474,7 @@ button:focus {
 .critters li:hover,
 .critters li:focus {
   border-color: #EFE36A;
+  cursor: pointer;
 }
 
 .timTomImg {
@@ -483,6 +485,7 @@ button:focus {
 }
 
 .modal {
+  font-family: "Libre Franklin", sans-serif;
   position: fixed;
   left: 0;
   top: 0;
@@ -508,6 +511,14 @@ button:focus {
   width: 500px;
   border-radius: 20px;
 }
+.modalImg {
+  height: 60px;
+}
+.modalHeading {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
 .modalHeader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -519,7 +530,7 @@ button:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #11A6BF;
-  padding: 0;
+  padding: 0 30px;
   margin: 0;
   border-radius: 20px 20px 0 0;
 }
@@ -530,10 +541,12 @@ button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
 }
 .modalClose {
   font-size: 28px;
   font-weight: bold;
+  margin: 0;
 }
 .modalClose:hover, .modalClose:focus {
   cursor: pointer;
@@ -549,15 +562,27 @@ button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .modalContentLabel {
-  background: #E6E1CF;
+  font-weight: bold;
+  background: #6C5D45;
   color: white;
   border-radius: 10px;
   text-align: center;
   width: 100px;
   padding: 10px;
   margin: 20px;
+}
+.modalContentText {
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  background: white;
+  width: 100%;
+  border-radius: 10px;
 }
 .modalFooter {
   background-color: #11A6BF;
