@@ -22,6 +22,7 @@
 .critters li:hover, 
 .critters li:focus {
   border-color: $yellow; 
+  cursor: pointer;
 }
 
 .timTomImg {
