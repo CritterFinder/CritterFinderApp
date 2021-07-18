@@ -1,0 +1,73 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0 , 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  &Wrapper {
+    width: 500px;
+    border-radius: 20px;
+  }
+  
+  &Header {
+    // @include headerFont(1rem, $secondary, 400);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $turquoise;
+    padding: 0;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+
+    &Content {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &Close {
+    font-size: 28px;
+    font-weight: bold;
+
+    &:hover, &:focus {
+      cursor: pointer;
+    }
+  }
+  
+  &Content {
+    background-color: $secondary;
+    padding: 20px;
+
+    &Item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &Label {
+      background: $taupe;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
+      width: 100px;
+      padding: 10px;
+      margin: 20px;
+    }
+  }
+
+  &Footer {
+    background-color: $turquoise;
+    height: 50px;
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+.hidden {
+  display: none;
+}

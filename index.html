@@ -55,26 +55,52 @@
                         
                         <button type="reset" class="clrButton">CLEAR</button>
                         <button type="submit" class="srchButton">SEARCH</button>
+                        <br>
+                        <button type="reset">CLEAR</button>
+
+                        <button type="submit" value="Submit">SEARCH</button>
                     </form>
                 </div>
-                <img src="assets/nook.png" class="nookImg" alt="">
+                <img src="assets/nook.png" class="inputNookImg" alt="Image of Tim Nook">
             </section>
             <!-- Gallery section -->
             <section class="critters">
                 <h3>Bugs | Catchable Now</h3>
-                <ul class="gallery">
+                <ul class="crittersGallery">
                     <!-- info displays here in an li -->
                 </ul>
                 <img src="assets/Timmy_and_Tommy.png"
                     alt="Picture shows Animal Crossing Character Timmy and Tommy happily standing beside one another and waving"
-                    class="timTomImg">
+                    class="crittersImgTimTom">
             </section>
 
             <!-- Modal -->
-            <section class="modal">
-                <ul>
-                    <!-- inserted dynamically -->
-                </ul>
+            <section class="modal hidden" id="modal">
+                <div class="modalWrapper">
+                    <div class="modalHeader">
+                        <!-- insert image and name here -->
+                        <div class="modalHeaderContent">
+                            <img id="modalImg" src="" alt="">
+                            <p id="modalHeading"></p>
+                        </div>
+                        <span class="modalClose">&times;</span>
+                    </div>
+                    <div class="modalContent">
+                        <div class="modalContentItem modalContent-location">
+                            <div class="modalContentLabel">Location</div>
+                            <div class="modalContentText" id="modalContent-location-text">test</div>
+                        </div>
+                        <div class="modalContentItem">
+                            <div class="modalContentLabel">Price</div>
+                            <div class="modalContentText" id="modalContent-price-text">test</div>
+                        </div>
+                        <div class="modalContentItem">
+                            <div class="modalContentLabel">Rarity</div>
+                            <div class="modalContentText" id="modalContent-rarity-text">test</div>
+                        </div>
+                    </div>
+                    <div class="modalFooter"></div>
+                </div>
             </section>
 
         </div>
