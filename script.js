@@ -64,7 +64,7 @@ app.displayCritters = (critter) => {
 
   // add eventListener to each list item
   liEl.addEventListener('click', (e) => {
-    console.log(e);
+    app.getCritterInfo(critter.id)
   })
 }
 
@@ -89,7 +89,7 @@ console.log(hemisphere, month, time);
   const crittersObj = app.getCritters()
   crittersObj.then(critters => {
     // clear existing content
-    const gallery = document.querySelector('ul')
+    const gallery = document.getElementsByClassName('crittersGallery')
     gallery.innerHTML = ""
     // loop through the critters and for each critter check
     critters.forEach(critter => {
@@ -109,7 +109,7 @@ console.log(hemisphere, month, time);
 }
 
 // a function that grabs and displays critter info
-app.critterInfo = (critterID) => {
+app.getCritterInfo = (critterID) => {
   // when user clicks on the icon
   // open modal
   // grab the critters info from the API
@@ -119,25 +119,37 @@ app.critterInfo = (critterID) => {
     // console.log(critters);
     critters.forEach(critter => {
       if (critter.id === critterID) {
+        const image = critter.icon_uri
         const name = critter.name["name-USen"]
         const price = critter.price
-        const shadow = critter.shadow
-        const speed = critter.speed
+        const shadow = critter.shadow // only available for fishes
+        const speed = critter.speed // only available for fishes
         const location = critter.availability.location
         const rarity = critter.availability.rarity
-        console.log(name, price, shadow, speed, location, rarity);
-        // console.log(location);
+        // console.log(image, name, price, location, rarity);
+        // display: image, name, price, shadow, speed, location, rarity
+        app.displayCritterInfo(image, name, price, location, rarity)
       }
-
     })
-    // display: image, name, price, shadow, speed, location, rarity
   })
-  // render info
 }
 
 // display critter info
-app.displayCritterInfo = () => {
-  // renders info in a ul
+app.displayCritterInfo = (image, name, price, location, rarity) => {
+  // console.log(image, name, price, location, rarity);
+  
+  // target the location element
+  const locationInfo = document.getElementById('modalInfo-location-text')
+  const priceInfo = document.getElementById('modalInfo-price-text')
+  const rarityInfo = document.getElementById('modalInfo-rarity-text')
+  // console.log(critterInfo);
+  // clear content
+  // critterInfo.innerHTML = ""
+  // critterInfo.append(infoItem)
+  locationInfo.textContent = location
+  priceInfo.textContent = price
+  rarityInfo.textContent = rarity
+  // console.log(locationInfo);
 }
 
 // a function that opens the modal

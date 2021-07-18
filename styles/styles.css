@@ -373,7 +373,7 @@ button {
   padding: 0.5rem;
 }
 
-.nookImg {
+.inputNookImg {
   position: absolute;
   bottom: -2rem;
   left: 0;
@@ -404,7 +404,7 @@ button {
   border-color: #EFE36A;
 }
 
-.timTomImg {
+.crittersImgTimTom {
   width: 20%;
   position: absolute;
   bottom: -2rem;
