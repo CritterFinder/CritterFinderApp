@@ -31,6 +31,7 @@
       align-items: center;
     }
   }
+
   &Close {
     font-size: 28px;
     font-weight: bold;
@@ -43,6 +44,21 @@
   &Content {
     background-color: $secondary;
     padding: 20px;
+
+    &Item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &Label {
+      background: $taupe;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
+      width: 100px;
+      padding: 10px;
+      margin: 20px;
+    }
   }
 
   &Footer {

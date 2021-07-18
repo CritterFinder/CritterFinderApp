@@ -471,6 +471,23 @@ button {
   background-color: #FAF4DE;
   padding: 20px;
 }
+.modalContentItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.modalContentLabel {
+  background: #E6E1CF;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  margin: 20px;
+}
 .modalFooter {
   background-color: #11A6BF;
   height: 50px;
