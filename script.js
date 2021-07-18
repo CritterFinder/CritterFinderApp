@@ -139,9 +139,9 @@ app.displayCritterInfo = (image, name, price, location, rarity) => {
   // console.log(image, name, price, location, rarity);
   
   // target the location element
-  const locationInfo = document.getElementById('modalInfo-location-text')
-  const priceInfo = document.getElementById('modalInfo-price-text')
-  const rarityInfo = document.getElementById('modalInfo-rarity-text')
+  const locationInfo = document.getElementById('modalContent-location-text')
+  const priceInfo = document.getElementById('modalContent-price-text')
+  const rarityInfo = document.getElementById('modalContent-rarity-text')
   // console.log(critterInfo);
   // clear content
   // critterInfo.innerHTML = ""

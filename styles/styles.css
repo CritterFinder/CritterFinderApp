@@ -411,6 +411,64 @@ button {
   right: -2rem;
 }
 
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modalWrapper {
+  width: 500px;
+  border-radius: 20px;
+}
+.modalHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #11A6BF;
+  padding: 0;
+  margin: 0;
+  border-radius: 20px 20px 0 0;
+}
+.modalHeaderContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modalContent {
+  background-color: #FAF4DE;
+}
+.modalFooter {
+  background-color: #11A6BF;
+  height: 50px;
+  border-radius: 0 0 20px 20px;
+}
+
 footer {
   background-color: #FAF4DE;
   text-align: center;
