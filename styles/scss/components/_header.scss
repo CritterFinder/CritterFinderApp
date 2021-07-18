@@ -1,63 +1,58 @@
-header {
+header { 
+  min-height: 700px; 
   background-image: url(../assets/hero.jpg);
-  height: 80vh; 
-  background-attachment: cover;
   background-position: center; 
   background-repeat: no-repeat; 
   position: relative; 
+  margin-bottom: 0; 
 }
 
-.acnhLogo {
-  position: absolute; 
-  top: 30%;
-  margin-left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+.header {
+  width: auto; 
+  min-height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: space-evenly;
+  padding-top: 2rem;
 }
+
 
 h1 {
-  @include headerFont (3rem, $brown, 700);
-  position: absolute; 
-  bottom: 10%;   
-  margin-left: 50%; 
-  margin-right: -50%; 
-  transform: translate(-50%, -50%);
-  background-color: $headingsColour; 
-  padding: 1.5rem;  
-  border-radius: 1rem;
-  text-transform: uppercase; 
-}
-
-// welcome section
-
-.wrapper { 
-  width: 90%; 
-  margin: 0 auto; 
-  padding-bottom: 5rem; 
+  @include headerFont(3rem, $brown, 700);
+    background-color: $secondary; 
+    padding: 1.5rem; 
+    text-transform: uppercase; 
+    border-radius: 15px; 
 }
 
 .welcomeBox {
   background-color: $brown; 
-  width: 80%; 
+  width: 80%;  
   padding: 3rem; 
   border-radius: 1rem; 
+  position: absolute; 
+  bottom: -3rem; 
+  text-align: center; 
+}
+
+.wrapper { 
+  width: 90%; 
   margin: 0 auto; 
+  padding: 5rem 0; 
 }
 
 h2 { 
   @include headerFont (2.8rem, $secondary, 700);
-  margin-top: 0; 
-  text-align: center; 
-}
-
-h3 {
-  @include headerFont (2.5rem, $brown, 700);
-  margin: 3rem; 
-  padding: 2rem; 
-  border-radius: 1rem; 
+  margin: 0 0 2rem; 
   text-align: center; 
 }
 
 .start {
-  background-color: $yellow; 
+  text-align: center; 
+}
+
+.startHeading {
+  background-color: $yellow;  
+  display: inline-block; 
 }
