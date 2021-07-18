@@ -143,14 +143,15 @@ app.displayCritterInfo = (image, name, price, location, rarity) => {
   const locationInfo = document.getElementById('modalContent-location-text')
   const priceInfo = document.getElementById('modalContent-price-text')
   const rarityInfo = document.getElementById('modalContent-rarity-text')
-  // console.log(critterInfo);
-  // clear content
-  // critterInfo.innerHTML = ""
-  // critterInfo.append(infoItem)
+  const modalImg = document.getElementById('modalImg')
+  const modalHeading = document.getElementById('modalHeading')
+  
   locationInfo.textContent = location
   priceInfo.textContent = price
   rarityInfo.textContent = rarity
-  // console.log(locationInfo);
+  modalImg.src = image
+  modalHeading.innerText = name
+  
 }
 
 // a function that opens the modal

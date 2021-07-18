@@ -469,6 +469,7 @@ button {
 }
 .modalContent {
   background-color: #FAF4DE;
+  padding: 20px;
 }
 .modalFooter {
   background-color: #11A6BF;
