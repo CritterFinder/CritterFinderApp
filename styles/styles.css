@@ -460,6 +460,13 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
+.modalClose {
+  font-size: 28px;
+  font-weight: bold;
+}
+.modalClose:hover, .modalClose:focus {
+  cursor: pointer;
+}
 .modalContent {
   background-color: #FAF4DE;
 }
@@ -467,6 +474,10 @@ button {
   background-color: #11A6BF;
   height: 50px;
   border-radius: 0 0 20px 20px;
+}
+
+.hidden {
+  display: none;
 }
 
 footer {

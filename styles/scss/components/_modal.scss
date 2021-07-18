@@ -31,10 +31,17 @@
       align-items: center;
     }
   }
+  &Close {
+    font-size: 28px;
+    font-weight: bold;
+
+    &:hover, &:focus {
+      cursor: pointer;
+    }
+  }
   
   &Content {
     background-color: $secondary;
-
   }
 
   &Footer {
@@ -42,4 +49,8 @@
     height: 50px;
     border-radius: 0 0 20px 20px;
   }
+}
+
+.hidden {
+  display: none;
 }

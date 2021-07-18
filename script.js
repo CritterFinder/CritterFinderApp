@@ -65,6 +65,7 @@ app.displayCritters = (critter) => {
   // add eventListener to each list item
   liEl.addEventListener('click', (e) => {
     app.getCritterInfo(critter.id)
+    app.toggleModal()
   })
 }
 
@@ -153,8 +154,28 @@ app.displayCritterInfo = (image, name, price, location, rarity) => {
 }
 
 // a function that opens the modal
-app.openModal = () => {
+app.toggleModal = () => {
+  // get the modal
+  const modal = document.getElementById('modal')
+  console.log(modal);
+  // get the span element that closes the modal
+  const closeBtn = document.getElementsByClassName('modalClose')[0];
 
+  if (modal.classList.contains('hidden')) {
+    modal.classList.remove('hidden')
+  }
+  // when user clicks on span, close the modal
+  closeBtn.addEventListener('click', () => {
+    // add display-none class to modal
+    modal.classList.add("hidden")
+  
+  })
+  // when user clicks anywhere outside of the modal, close it
+  window.onclick = (e) => {
+    if (e.target == modal) {
+      modal.classList.add('hidden')
+    }
+  }
 }
 
 // a function to convert 12hr time to 24
