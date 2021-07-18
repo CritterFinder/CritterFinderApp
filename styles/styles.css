@@ -262,7 +262,7 @@ h3 {
   font-size: 2.5rem;
   color: #6C5D45;
   font-weight: 700;
-  line-height: 1rem;
+  line-height: 2rem;
   margin: 3rem;
   padding: 2rem;
   border-radius: 1rem;
@@ -312,11 +312,13 @@ h1 {
   font-size: 3rem;
   color: #6C5D45;
   font-weight: 700;
-  line-height: 1rem;
+  line-height: 2rem;
   background-color: #FAF4DE;
   padding: 1.5rem;
   text-transform: uppercase;
   border-radius: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .welcomeBox {
@@ -340,7 +342,7 @@ h2 {
   font-size: 2.8rem;
   color: #FAF4DE;
   font-weight: 700;
-  line-height: 1rem;
+  line-height: 2rem;
   margin: 0 0 2rem;
   text-align: center;
 }
@@ -375,9 +377,10 @@ h2 {
 
 form {
   margin: auto;
-  width: 80%;
   display: grid;
-  grid-template-columns: repeat(12, auto);
+  grid-template-columns: repeat(12, autofill);
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .inputBox label {
@@ -390,7 +393,8 @@ form {
   width: 8rem;
   display: inline-block;
   text-align: center;
-  grid-column-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .inputBox select {
@@ -415,18 +419,21 @@ form {
 }
 
 .inputBox select,
-.inputBox input,
-button {
-  margin: 2rem -50% 2rem 50%;
-  grid-column-start: 6;
+.inputBox input {
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 .clrButton {
   grid-column-start: 1;
+  grid-column-end: 2;
+  width: auto;
 }
 
 .srchButton {
-  grid-column-start: 7;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 5;
 }
 
 button {
@@ -435,6 +442,7 @@ button {
   padding: 0.5rem;
   background-color: #2C6970;
   color: #FAF4DE;
+  grid-row-start: 5;
 }
 
 button:hover,
@@ -460,6 +468,8 @@ button:focus {
 }
 
 .critters ul {
+  padding: inherit;
+  margin: auto;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -481,7 +491,7 @@ button:focus {
   width: 20%;
   position: absolute;
   bottom: -3rem;
-  right: -2rem;
+  right: -0.5rem;
 }
 
 .modal {
@@ -529,7 +539,7 @@ button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #11A6BF;
+  background-color: #6db6a2;
   padding: 0 30px;
   margin: 0;
   border-radius: 20px 20px 0 0;
@@ -554,6 +564,8 @@ button:focus {
 .modalContent {
   background-color: #FAF4DE;
   padding: 20px;
+  border-top: 3px solid #EFE36A;
+  border-bottom: 3px solid #EFE36A;
 }
 .modalContentItem {
   display: -webkit-box;
@@ -585,7 +597,7 @@ button:focus {
   border-radius: 10px;
 }
 .modalFooter {
-  background-color: #11A6BF;
+  background-color: #6db6a2;
   height: 50px;
   border-radius: 0 0 20px 20px;
 }
@@ -603,4 +615,50 @@ footer p {
   margin: 0;
   font-size: 2rem;
   color: #6C5D45;
+}
+
+@media (max-width: 775px) {
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  button {
+    text-align: center;
+  }
+
+  input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .inputNookImg {
+    top: -8rem;
+    left: 0;
+    width: 20%;
+  }
+}
+@media (max-width: 715px) {
+  .critters ul {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media (max-width: 515px) {
+  .critters ul {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  h1 {
+    text-align: center;
+  }
 }
