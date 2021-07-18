@@ -1,6 +1,33 @@
+// Skip to main content link for screen readers
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: $buttons;
+  color: $secondary;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 // Basic overall styling
 html {
-  font-size: 125%; 
+  font-size: 100%; 
+}
+
+* {
+  max-width: 1780px; 
+  margin: 0 auto; 
+}
+
+h3 {
+  @include headerFont (2.5rem, $brown, 700);
+  margin: 3rem; 
+  padding: 2rem; 
+  border-radius: 1rem;  
+  text-align: center; 
 }
 
 p {

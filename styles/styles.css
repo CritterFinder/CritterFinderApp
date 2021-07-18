@@ -235,78 +235,26 @@ html {
   overflow: hidden;
 }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: #2C6970;
+  color: #FAF4DE;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 html {
-  font-size: 125%;
+  font-size: 100%;
 }
 
-p {
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 1rem;
-  color: #FAF4DE;
-}
-
-main {
-  background-image: url(../assets/pattern-leaves-white.jpg);
-}
-
-header {
-  background-image: url(../assets/hero.jpg);
-  height: 80vh;
-  background-attachment: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.acnhLogo {
-  position: absolute;
-  top: 30%;
-  margin-left: 50%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-h1 {
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 3rem;
-  color: #6C5D45;
-  font-weight: 700;
-  line-height: 1rem;
-  position: absolute;
-  bottom: 10%;
-  margin-left: 50%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #FFFFFF;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  text-transform: uppercase;
-}
-
-.wrapper {
-  width: 90%;
+* {
+  max-width: 1780px;
   margin: 0 auto;
-  padding-bottom: 5rem;
-}
-
-.welcomeBox {
-  background-color: #6C5D45;
-  width: 80%;
-  padding: 3rem;
-  border-radius: 1rem;
-  margin: 0 auto;
-}
-
-h2 {
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 2.8rem;
-  color: #FAF4DE;
-  font-weight: 700;
-  line-height: 1rem;
-  margin-top: 0;
-  text-align: center;
 }
 
 h3 {
@@ -321,8 +269,89 @@ h3 {
   text-align: center;
 }
 
+p {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+  color: #FAF4DE;
+}
+
+main {
+  background-image: url(../assets/pattern-leaves-white.jpg);
+}
+
+header {
+  min-height: 700px;
+  background-image: url(../assets/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.header {
+  width: auto;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 2rem;
+}
+
+h1 {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 3rem;
+  color: #6C5D45;
+  font-weight: 700;
+  line-height: 1rem;
+  background-color: #FAF4DE;
+  padding: 1.5rem;
+  text-transform: uppercase;
+  border-radius: 15px;
+}
+
+.welcomeBox {
+  background-color: #6C5D45;
+  width: 80%;
+  padding: 3rem;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -3rem;
+  text-align: center;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+h2 {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 2.8rem;
+  color: #FAF4DE;
+  font-weight: 700;
+  line-height: 1rem;
+  margin: 0 0 2rem;
+  text-align: center;
+}
+
 .start {
+  text-align: center;
+}
+
+.startHeading {
   background-color: #EFE36A;
+  display: inline-block;
 }
 
 .inputSection {
@@ -345,32 +374,73 @@ h3 {
 }
 
 form {
-  margin: 0 auto;
+  margin: auto;
   width: 80%;
+  display: grid;
+  grid-template-columns: repeat(12, auto);
 }
 
 .inputBox label {
   font-family: "Libre Franklin", sans-serif;
   color: #FAF4DE;
   background-color: #6C5D45;
+  margin: auto;
   padding: 0.5rem;
   border-radius: 0.5rem;
   width: 8rem;
   display: inline-block;
   text-align: center;
+  grid-column-start: 2;
+}
+
+.inputBox select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(../assets/input-arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.inputBox input {
+  outline: none;
+}
+
+.inputBox select:hover,
+.inputBox select:focus,
+.inputBox input:hover,
+.inputBox input:focus {
+  border: 2px solid #2C6970;
 }
 
 .inputBox select,
-.inputBox input {
+.inputBox input,
+button {
   margin: 2rem -50% 2rem 50%;
+  grid-column-start: 6;
+}
+
+.clrButton {
+  grid-column-start: 1;
+}
+
+.srchButton {
+  grid-column-start: 7;
 }
 
 button {
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 15px;
+  padding: 0.5rem;
   background-color: #2C6970;
   color: #FAF4DE;
-  padding: 0.5rem;
+}
+
+button:hover,
+button:focus {
+  background-color: #6db6a2;
+  color: #FAF4DE;
 }
 
 .nookImg {
@@ -385,6 +455,7 @@ button {
   border: 8px solid #2C6970;
   border-radius: 1rem;
   position: relative;
+  padding-bottom: 4rem;
 }
 
 .critters ul {
@@ -407,7 +478,7 @@ button {
 .timTomImg {
   width: 20%;
   position: absolute;
-  bottom: -2rem;
+  bottom: -3rem;
   right: -2rem;
 }
 

@@ -6,7 +6,6 @@
   border-radius: 1rem; 
   padding: 5% 0;
   position: relative;   
-  
 }
 
 .inputBox {
@@ -16,38 +15,76 @@
   margin: 0 auto;
   border: 8px solid $yellow; 
   border-radius: 1rem;
-  
 }
 
 form { 
-  margin: 0 auto; 
+  margin: auto; 
   width: 80%;  
+  display: grid; 
+  grid-template-columns: repeat(12, auto);
+  // gap: 2rem 0; 
 }
 
 .inputBox label {
   font-family: 'Libre Franklin', sans-serif; 
   color: $secondary; 
   background-color: $brown; 
+  margin: auto; 
   padding: .5rem; 
   border-radius: .5rem;  
-  width: 8rem;
+  width: 8rem; 
   display: inline-block;
   text-align: center; 
+  grid-column-start: 2; 
 } 
 
+.inputBox select {
+  appearance: none;
+  background-image: url(../assets/input-arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.inputBox input {
+  outline: none; 
+}
+
+.inputBox select:hover,
+.inputBox select:focus,
+.inputBox input:hover,
+.inputBox input:focus {
+  border: 2px solid $buttons,
+}
 
 .inputBox select, 
-.inputBox input {  
+.inputBox input,
+  button {  
   margin: 2rem -50% 2rem 50%;
+  grid-column-start: 6; 
+}
+
+.clrButton {
+  grid-column-start: 1; 
+}
+
+.srchButton {
+  grid-column-start: 7; 
 }
 
 button {
   border: none; 
-  border-radius: .5rem; 
-  background-color: $buttons; 
+  border-radius: 15px; 
+  padding: .5rem;
+  background-color: $buttons;
   color: $secondary; 
-  padding: .5rem;  
-} 
+}
+
+button:hover, 
+button:focus {
+  background-color: $headingsBackground;
+  color: $secondary;  
+}
 
 .nookImg {
   position: absolute; 

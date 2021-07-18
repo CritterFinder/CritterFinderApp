@@ -5,32 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Critter Finder</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Zilla+Slab&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
+
+    <a href="#maincontent" class="skip-link"> Skip to main content</a>
+    
     <header>
-        <img src="assets/logo-acnh-en.png" alt="Logo for Animal Crossing: New Horizons" class="acnhLogo">
-        <h1>Critter Finder</h1>
+        <div class="header">
+            <img src="assets/logo-acnh-en.png" alt="Logo for Animal Crossing: New Horizons" class="headerLogo"> 
+            <h1>Critter Finder</h1>
+                <div class="welcomeBox">
+                    <h2>Welcome!</h2>
+                    <p>There are many critters to find and we know you're excited to discover them all! Let Mr. Nook help you find them by providing him with some information below.</p>
+                </div>
+        </div>
     </header>
 
     <main>
         <div class="wrapper">
-            <!-- Welcome section -->
-            <section class="welcome">
-                <div class="welcomeBox">
-                    <h2>Welcome!</h2>
-                    <p>There are many critters to find and we know you're excited to discover them all! Let Mr. Nook
-                        help you find them by providing him with some information below.</p>
-                </div>
+            <section class="start">
+                <h3 class="startHeading">Let's get started!</h3>
             </section>
-
-            <h3 class="start">Let's get started!</h3>
             <!-- Search section -->
             <section class="inputSection">
                 <div class="inputBox">
@@ -41,18 +44,17 @@
                             <option value="northern">Northern</option>
                             <option value="southern">Southern</option>
                         </select>
-                        <br>
+                        
                         <label for="month">Month</label>
                         <select name="month" id="month">
                             <!-- months will show here -->
                         </select>
-                        <br>
+                        
                         <label for="time">Time</label>
                         <input type="text" name="time" id="time" maxlength="2">
-                        <br>
-                        <button type="reset">CLEAR</button>
-                        <!-- <button type="submit">SUBMIT</button> -->
-                        <button type="submit" value="Submit">SEARCH</button>
+                        
+                        <button type="reset" class="clrButton">CLEAR</button>
+                        <button type="submit" class="srchButton">SEARCH</button>
                     </form>
                 </div>
                 <img src="assets/nook.png" class="nookImg" alt="">
