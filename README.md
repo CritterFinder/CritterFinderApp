@@ -5,7 +5,7 @@ Juno College Web Development Bootcamp - Project 1
 - [Overview](#overview)
   - [Objective](#the-challenge)
   - [Screenshot](#screenshot)
-- [My process](#my-process)
+- [Our process](#our-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 - [Authors](#authors)
@@ -18,11 +18,12 @@ Juno College Web Development Bootcamp - Project 1
 
 ### Screenshot
 
+![](screenshots/screenshot.png)
 
 ### Links
 
-- Solution URL: [Code]()
-- Live Site URL: [Preview]()
+- Solution URL: [Code](https://github.com/CritterFinder/CritterFinderApp)
+- Live Site URL: [Preview](https://critterfinder.github.io/CritterFinderApp/)
 
 ## Our process
 ### Pseudo code
@@ -49,7 +50,6 @@ Juno College Web Development Bootcamp - Project 1
 
 ### Built with
 
-- Semantic HTML5 markup
 - CSS custom properties
 - SCSS
 - JavaScript
