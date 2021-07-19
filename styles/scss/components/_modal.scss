@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   
   &Wrapper {
     width: 500px;
@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: $turquoise;
+    background-color: $headingsBackground;;
     padding: 0 30px;
     margin: 0;
     border-radius: 20px 20px 0 0;
@@ -56,6 +56,8 @@
   &Content {
     background-color: $secondary;
     padding: 20px;
+    border-top: 3px solid $yellow; 
+    border-bottom: 3px solid $yellow; 
 
     &Item {
       display: flex;
@@ -85,11 +87,12 @@
   }
 
   &Footer {
-    background-color: $turquoise;
+    background-color: $headingsBackground;
     height: 50px;
     border-radius: 0 0 20px 20px;
   }
 }
+
 
 .hidden {
   display: none;

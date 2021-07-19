@@ -4,11 +4,12 @@
     font-size: $fontSize; 
     color: $color; 
     font-weight: $weight;
-    line-height: 1rem;
+    line-height: 2rem;
 }
 
 @mixin bodyFont($fontSize, $color) {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Zilla Slab', serif;
+    // font-family: 'Libre Franklin', sans-serif;
     font-size: $fontSize;
     color: $color;  
 }

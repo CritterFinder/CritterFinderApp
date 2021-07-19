@@ -1,0 +1,38 @@
+// MEDIA QUERIES 
+
+@media (max-width: 775px) {
+    form {
+        display: flex; 
+        flex-direction: column; 
+    }
+    button {
+        text-align: center; 
+    }
+
+    input {
+        display: flex; 
+        flex-direction: row; 
+    }
+
+    .inputNookImg {
+        top: -8rem; 
+        left: 0; 
+        width: 20%; 
+    }
+}
+
+ @media (max-width: 715px) {
+     .critters ul {
+        grid-template-columns: repeat(3, auto);
+     }
+ }  
+
+ @media (max-width: 515px) {
+     .critters ul {
+         grid-template-columns: repeat(2, auto);
+     }
+
+     h1 { 
+         text-align: center; 
+     }
+ }

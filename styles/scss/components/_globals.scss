@@ -5,7 +5,7 @@
   top: 5px;
   z-index: 999;
   background: $buttons;
-  color: $secondary;
+  color: $primary;
 }
 
 .skip-link:focus {
@@ -27,11 +27,11 @@ h3 {
   margin: 3rem; 
   padding: 2rem; 
   border-radius: 1rem;  
-  text-align: center; 
+  text-align: center;  
 }
 
 p {
-  @include bodyFont(1rem, $secondary);
+  @include bodyFont(2rem, $primary);
 }
 
 // MAIN STYLING

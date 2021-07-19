@@ -20,10 +20,11 @@ header {
 
 h1 {
   @include headerFont(3rem, $brown, 700);
-    background-color: $secondary; 
+    background-color: $primary; 
     padding: 1.5rem; 
     text-transform: uppercase; 
     border-radius: 15px; 
+    flex-wrap: wrap; 
 }
 
 .welcomeBox {
@@ -43,7 +44,7 @@ h1 {
 }
 
 h2 { 
-  @include headerFont (2.8rem, $secondary, 700);
+  @include headerFont (2.8rem, $primary, 700);
   margin: 0 0 2rem; 
   text-align: center; 
 }

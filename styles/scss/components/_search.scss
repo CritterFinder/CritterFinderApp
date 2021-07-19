@@ -1,5 +1,5 @@
 .inputSection {
-  background-color: $headingsBackground; 
+  background-color: $border; 
   width: 100%; 
   height: 100%; 
   margin: auto; 
@@ -19,10 +19,10 @@
 
 form { 
   margin: auto; 
-  width: 80%;  
-  display: grid; 
-  grid-template-columns: repeat(12, auto);
-  // gap: 2rem 0; 
+  display: grid;  
+  grid-template-columns: repeat(12, autofill);
+  gap: 2rem; 
+  padding: 2rem; 
 }
 
 .inputBox label {
@@ -35,7 +35,8 @@ form {
   width: 8rem; 
   display: inline-block;
   text-align: center; 
-  grid-column-start: 2; 
+  grid-column-start: 1;
+  grid-column-end: 2;  
 } 
 
 .inputBox select {
@@ -58,18 +59,22 @@ form {
 }
 
 .inputBox select, 
-.inputBox input,
-  button {  
-  margin: 2rem -50% 2rem 50%;
-  grid-column-start: 6; 
+.inputBox input {    
+  grid-column-start: 3; 
+  grid-column-end: 4;   
 }
 
 .clrButton {
-  grid-column-start: 1; 
+  grid-column-start: 1;
+  grid-column-end: 2; 
+  width: auto;   
+ 
 }
 
 .srchButton {
-  grid-column-start: 7; 
+  grid-column-start: 4;
+  grid-column-end: 5;  
+  grid-row-start: 5;  
 }
 
 button {
@@ -78,11 +83,13 @@ button {
   padding: .5rem;
   background-color: $buttons;
   color: $secondary; 
+  grid-row-start: 5; 
+ 
 }
 
 button:hover, 
 button:focus {
-  background-color: $headingsBackground;
+  background-color: $border;
   color: $secondary;
   cursor: pointer;
 }
